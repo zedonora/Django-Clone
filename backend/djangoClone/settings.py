@@ -25,7 +25,10 @@ SECRET_KEY = 'fnvk_v5x85j(zl(gg7%8e8r4_9@+mg^%w-w#3-xkiwt2&1dqq9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost','localhost:3000',
+    'localhost:8000',
+    'localhost:8080',
+     '.pythonanywhere.com']
 
 
 # Application definition
@@ -55,9 +58,11 @@ MIDDLEWARE = [
 ]
 
 #script안에서의 리소스 요청을 허용할 도메인 추가
-CORS_ORIGIN_WHITELIST = (
-    'localhost:3000/'
-)
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'http://localhost:8000',
+    'http://localhost:8080',
+]
 
 ROOT_URLCONF = 'djangoClone.urls'
 
